@@ -1,0 +1,76 @@
+@use 'utils/functions' as *;
+@use 'utils/constants' as *;
+@use 'themes/colors' as *;
+
+$primary-blue: #b5d5d8;
+$secondary-blue: #89a2a5;
+
+.ads-card {
+  min-height: 300px;
+  padding: $card-padding;
+  background-color: $primary-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: prem(16px);
+  border-radius: $card-border-radius;
+  box-sizing: border-box;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__save-btn {
+      button {
+        width: prem(32px);
+        height: prem(32px);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        color: $secondary-blue;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: prem(16px);
+
+    &__title {
+      font-size: prem(24px);
+      font-weight: 600;
+      max-width: 90%;
+    }
+
+    &__subtitle {
+      max-width: 60%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+
+    &__cta {
+      display: flex;
+      flex-direction: column;
+      margin-top: prem(32px);
+
+      &__link {
+        font-size: prem(14px);
+      }
+
+      &__underline {
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-blue;
+      }
+    }
+  }
+}

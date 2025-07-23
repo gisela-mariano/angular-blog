@@ -1,0 +1,29 @@
+<div class="ads-card">
+  <header class="ads-card__header">
+    <app-tag
+      content="ADS"
+      [tagStyle]="{
+        showDot: true,
+        theme: TagTheme.DARK,
+        fill: false,
+      }"
+    />
+
+    <app-button class="ads-card__header__save-btn" label="+" />
+  </header>
+
+  <main class="ads-card__main">
+    <h2 class="ads-card__main__subtitle">{{ subtitle() }}</h2>
+
+    <h1 class="ads-card__main__title">{{ title() }}</h1>
+  </main>
+
+  <footer class="ads-card__footer">
+    <div class="ads-card__footer__cta">
+      <a href="{{ cta().url }}" class="ads-card__footer__cta__link">{{
+        cta().label
+      }}</a>
+      <div class="ads-card__footer__cta__underline"></div>
+    </div>
+  </footer>
+</div>
