@@ -1,0 +1,44 @@
+@use 'utils/functions' as *;
+@use 'utils/constants' as *;
+
+.carousel-card {
+  min-height: 400px;
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__container-countdown {
+    display: flex;
+    justify-content: end;
+
+    &__countdown {
+      width: 40px;
+      height: 40px;
+      color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__cta-btn {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: prem(16px) prem(24px);
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 40px;
+      background-color: white;
+      color: black;
+    }
+  }
+}

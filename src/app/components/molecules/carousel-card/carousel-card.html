@@ -1,0 +1,11 @@
+<div
+  class="carousel-card"
+  [style.background-image]="`url('${images()[currentIndex]}')`">
+  <div class="carousel-card__container-countdown">
+    <span class="carousel-card__container-countdown__countdown">{{
+      countdown
+    }}</span>
+  </div>
+
+  <app-button class="carousel-card__cta-btn" label="See all picks &#x2192;" />
+</div>
