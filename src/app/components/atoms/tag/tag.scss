@@ -1,0 +1,47 @@
+@use 'utils/functions' as *;
+@use 'themes/colors' as *;
+
+$secondary-color: white;
+
+.tag {
+  padding: prem(4px) prem(12px);
+  border: 1px solid;
+  border-radius: prem(20px);
+  display: flex;
+  gap: prem(8px);
+  align-items: center;
+
+  &__dot {
+    width: prem(4px);
+    height: prem(4px);
+    border-radius: 50%;
+  }
+
+  &--dark {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    .tag__dot {
+      background-color: $primary-color;
+    }
+
+    &.tag--fill {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+
+  &--light {
+    border-color: $secondary-color;
+    color: $secondary-color;
+
+    .tag__dot {
+      background-color: $secondary-color;
+    }
+
+    &.tag--fill {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@let _style = style();
+
+<div
+  class="tag"
+  [class]="`tag--${_style.theme}`"
+  [class.tag--fill]="_style.fill"
+>
+  @if (_style.showDot) {
+    <div class="tag__dot"></div>
+  }
+
+  <span class="tag__content">
+    {{ content() }}
+  </span>
+</div>
