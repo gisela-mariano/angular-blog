@@ -1,0 +1,53 @@
+@use 'utils/constants' as *;
+@use 'utils/functions' as *;
+
+.main-card {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  padding: $card-padding;
+  background-size: cover;
+  background-position: center;
+  border-radius: $card-border-radius;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__tags-container {
+      display: flex;
+      flex-direction: column;
+      gap: prem(8px);
+
+      &__tag {
+        width: fit-content;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+
+    &__cta-btn {
+      button {
+        width: prem(32px);
+        height: prem(32px);
+        padding-bottom: 8px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

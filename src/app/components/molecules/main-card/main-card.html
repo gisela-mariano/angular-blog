@@ -1,0 +1,20 @@
+<div class="main-card" [style.background-image]="`url('${bgImageUrl()}')`">
+  <header class="main-card__header">
+    <div class="main-card__header__tags-container">
+      @for (tag of tags(); track $index) {
+        <app-tag
+          class="main-card__header__tags-container__tag"
+          [content]="tag.label"
+          [tagStyle]="tag.style ?? {}" />
+      }
+    </div>
+
+    <div class="main-card__header__title-container">
+      <ng-content select="card-title" />
+    </div>
+  </header>
+
+  <footer class="main-card__footer">
+    <app-button class="main-card__footer__cta-btn" label="&#x2934;" />
+  </footer>
+</div>
