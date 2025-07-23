@@ -1,0 +1,19 @@
+<header class="header-menu">
+  <section class="header-menu__left-section">
+    <h1 class="header-menu__title">BlogSpot.</h1>
+
+    <ul class="header-menu__links">
+      @for (item of menuItems; track $index) {
+        <li>
+          <a href="{{ item.href }}">{{ item.label }}</a>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <div class="header-menu__actions">
+    <input type="text" name="search" id="search" />
+
+    <app-button label="Menu"></app-button>
+  </div>
+</header>

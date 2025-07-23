@@ -1,0 +1,52 @@
+@use 'utils/functions' as *;
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left-section {
+    display: flex;
+  }
+
+  &__title {
+    margin-right: prem(32px);
+    color: black;
+    font-size: prem(24px);
+    font-weight: bold;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: prem(16px);
+
+    a {
+      font-style: none;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: prem(16px);
+
+    input {
+      padding: prem(8px) prem(16px);
+      border: 1px solid black;
+      border-radius: 30px;
+    }
+
+    button {
+      padding: prem(8px) prem(16px);
+      border: 1px solid black;
+      border-radius: 30px;
+      color: black;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
