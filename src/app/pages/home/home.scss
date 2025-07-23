@@ -1,0 +1,78 @@
+@use 'utils/functions' as *;
+@use 'utils/functions' as *;
+@use 'themes/colors' as *;
+
+$title-border-radius: 10px;
+
+.main-content {
+  height: 100vh;
+  margin-top: prem(48px);
+  display: flex;
+  gap: prem(32px);
+
+  &__main-section {
+    max-height: 678px;
+    flex-grow: 2;
+    box-sizing: border-box;
+
+    &__container-title {
+      margin-bottom: prem(40px);
+      display: flex;
+      gap: prem(8px);
+      align-items: end;
+      font-style: italic;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+
+    &__card-title-container {
+      &__tag-container {
+        background-color: white;
+        display: flex;
+        gap: prem(8px);
+        align-items: center;
+        width: fit-content;
+        padding: prem(8px) prem(12px);
+        border-radius: $title-border-radius $title-border-radius 0 0;
+
+        &__dot {
+          width: 4px;
+          height: 4px;
+          background-color: $primary-color;
+          border-radius: 50%;
+        }
+      }
+
+      &__title-messages {
+        display: flex;
+        flex-direction: column;
+        font-size: prem(32px);
+
+        &__message {
+          width: fit-content;
+          padding: prem(4px) prem(12px);
+          background-color: white;
+          border-bottom-right-radius: $title-border-radius;
+
+          &:first-child {
+            border-top-right-radius: $title-border-radius;
+          }
+
+          &:last-child {
+            border-bottom-left-radius: $title-border-radius;
+          }
+        }
+      }
+    }
+  }
+
+  &__side-section {
+    margin-top: prem(50px);
+    display: flex;
+    flex-direction: column;
+    gap: prem(32px);
+  }
+}

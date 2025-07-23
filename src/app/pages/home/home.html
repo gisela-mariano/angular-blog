@@ -1,0 +1,63 @@
+<div class="home">
+  <app-header-menu />
+
+  <main class="main-content">
+    <section class="main-content__main-section">
+      <div class="main-content__main-section__container-title">
+        <h1>Best of the week</h1>
+
+        <a href="">See all posts &#x2192;</a>
+      </div>
+
+      <app-main-card
+        [tags]="[
+          {
+            label: ('06/26/2025' | date)!,
+            style: { theme: TagTheme.LIGHT, fill: true },
+          },
+          {
+            label: 'Travel',
+            style: { theme: TagTheme.LIGHT, showDot: true },
+          },
+        ]"
+        [bgImageUrl]="
+          'https://s2-marieclaire.glbimg.com/5SSoqpYfaadzpc561maAo3sQZSw=/0x0:2400x1600/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2024/M/K/BmqzZDQ5iiiCaBxmAPkg/documerica-cu8n4bhkcoi-unsplash.jpg'
+        ">
+        <card-title>
+          <div class="main-content__main-section__card-title-container">
+            <div
+              class="main-content__main-section__card-title-container__tag-container">
+              <div
+                class="main-content__main-section__card-title-container__tag-container__dot"></div>
+              <span>{{ titleTag() }}</span>
+            </div>
+
+            <div
+              class="main-content__main-section__card-title-container__title-messages">
+              @for (message of titleMessages(); track $index) {
+                <span
+                  class="main-content__main-section__card-title-container__title-messages__message">
+                  {{ message }}
+                </span>
+              }
+            </div>
+          </div>
+        </card-title>
+      </app-main-card>
+    </section>
+
+    <section class="main-content__side-section">
+      <app-ads-card
+        [title]="'Real talk in a corporate world'"
+        subtitle="Become A BROADCAST MEMBER"
+        [cta]="{ label: 'Learn more', url: '' }" />
+
+      <app-carousel-card
+        [images]="[
+          'https://burst.shopifycdn.com/photos/model-in-gold-fashion.jpg?width=1000&format=pjpg&exif=0&iptc=0',
+          'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D',
+          'https://i.pinimg.com/564x/cd/eb/bd/cdebbd229398e13259d8ca93d27bd2ac.jpg',
+        ]" />
+    </section>
+  </main>
+</div>
