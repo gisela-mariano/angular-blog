@@ -1,0 +1,12 @@
+@use 'utils/functions' as *;
+@use 'utils/constants' as *;
+
+.featured-articles {
+  width: 100%;
+  display: flex;
+  gap: prem(32px);
+
+  &__article {
+    flex-grow: 1;
+  }
+}

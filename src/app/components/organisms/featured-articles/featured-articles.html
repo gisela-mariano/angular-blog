@@ -1,0 +1,10 @@
+<div class="featured-articles">
+  @for (article of articles(); track $index) {
+    <app-article-card
+      class="featured-articles__article"
+      [image]="article.image"
+      [category]="article.category"
+      [insideTags]="article.insideTags"
+      [title]="article.title" />
+  }
+</div>
