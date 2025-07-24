@@ -1,0 +1,15 @@
+@use 'utils/functions' as *;
+
+.section-title {
+  margin-bottom: prem(40px);
+  display: flex;
+  justify-content: center;
+  gap: prem(8px);
+  align-items: end;
+  font-style: italic;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
