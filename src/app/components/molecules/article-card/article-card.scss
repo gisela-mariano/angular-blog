@@ -1,0 +1,63 @@
+@use 'utils/functions' as *;
+@use 'utils/constants' as *;
+
+.article-card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: prem(8px);
+  box-sizing: border-box;
+
+  &__main-content {
+    width: 100%;
+    height: 100%;
+    padding: $card-padding;
+    border-radius: $card-border-radius;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+      &__tags-container {
+        display: flex;
+        flex-direction: column;
+        gap: prem(8px);
+
+        &__tag {
+          width: fit-content;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: end;
+
+      &__cta-btn {
+        button {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          background-color: white;
+          padding-bottom: prem(8px);
+          font-size: 1.6rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: prem(8px);
+
+    h1 {
+      font-weight: bold;
+    }
+  }
+}

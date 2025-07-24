@@ -1,0 +1,36 @@
+<div class="article-card">
+  <div
+    class="article-card__main-content"
+    [style.background-image]="`url('${image()}')`">
+    <header class="article-card__main-content__header">
+      <div class="article-card__main-content__header__tags-container">
+        @for (tag of insideTags(); track $index) {
+          <app-tag
+            class="article-card__main-content__header__tags-container__tag"
+            [content]="tag.label"
+            [tagStyle]="tag.style ?? {}" />
+        }
+      </div>
+    </header>
+
+    <footer class="article-card__main-content__footer">
+      <app-button
+        class="article-card__main-content__footer__cta-btn"
+        label="&#x2934;" />
+    </footer>
+  </div>
+
+  <div class="article-card__info">
+    @if (category()) {
+      <app-tag
+        [content]="category()!"
+        [tagStyle]="{
+          showDot: true,
+          theme: TagTheme.DARK,
+          showBorder: false,
+        }" />
+    }
+
+    <h1>{{ title() }}</h1>
+  </div>
+</div>
