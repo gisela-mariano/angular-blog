@@ -1,5 +1,5 @@
 import { TagStyle, TagTheme } from '@/types';
-import { Component, input } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-tag',
@@ -7,14 +7,19 @@ import { Component, input } from '@angular/core';
   templateUrl: './tag.html',
   styleUrl: './tag.scss',
 })
-export class Tag {
+export class AppTag {
   content = input.required<string>();
-  style = input<TagStyle>(
-    {
-      showDot: false,
-      theme: TagTheme.DARK,
-      fill: false,
-    },
-    { alias: 'tagStyle' }
-  );
+  style = input<TagStyle>({}, { alias: 'tagStyle' });
+
+  private readonly defaultStyle = signal<TagStyle>({
+    showDot: false,
+    theme: TagTheme.DARK,
+    fill: false,
+    showBorder: true,
+  });
+
+  readonly mergedStyle = computed(() => ({
+    ...this.defaultStyle(),
+    ...this.style(),
+  }));
 }

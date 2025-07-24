@@ -1,11 +1,11 @@
-import { MainCardTag, TagTheme } from '@/types';
+import { Tag, TagTheme } from '@/types';
 import { Component, input, ViewEncapsulation } from '@angular/core';
 import { Button } from '@components/atoms/button/button';
-import { Tag } from '@components/atoms/tag/tag';
+import { AppTag } from '../../atoms/tag/tag';
 
 @Component({
   selector: 'app-main-card',
-  imports: [Tag, Button],
+  imports: [AppTag, Button],
   templateUrl: './main-card.html',
   styleUrl: './main-card.scss',
   encapsulation: ViewEncapsulation.None,
@@ -13,6 +13,6 @@ import { Tag } from '@components/atoms/tag/tag';
 export class MainCard {
   TagTheme = TagTheme;
 
-  tags = input<MainCardTag[]>();
+  tags = input<Tag[]>();
   bgImageUrl = input.required<string>();
 }

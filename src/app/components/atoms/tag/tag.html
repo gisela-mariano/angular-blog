@@ -1,10 +1,10 @@
-@let _style = style();
+@let _style = mergedStyle();
 
 <div
   class="tag"
   [class]="`tag--${_style.theme}`"
   [class.tag--fill]="_style.fill"
->
+  [class.tag--border]="_style.showBorder">
   @if (_style.showDot) {
     <div class="tag__dot"></div>
   }
