@@ -2,7 +2,7 @@
 @use 'utils/constants' as *;
 
 .carousel-card {
-  min-height: 400px;
+  height: 100%;
   padding: $card-padding;
   border-radius: $card-border-radius;
   box-sizing: border-box;

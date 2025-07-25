@@ -1,7 +1,7 @@
 <div class="home">
   <app-header-menu />
 
-  <main class="main-content">
+  <section class="main-content">
     <section class="main-content__main-section">
       <div class="main-content__main-section__container-title">
         <h1>Best of the week</h1>
@@ -59,5 +59,54 @@
           'https://i.pinimg.com/564x/cd/eb/bd/cdebbd229398e13259d8ca93d27bd2ac.jpg',
         ]" />
     </section>
-  </main>
+  </section>
+
+  <section class="articles-section">
+    <header class="articles-section__header">
+      <app-section-title title="Fashion" message="Category" />
+    </header>
+
+    <main class="articles-section__main">
+      <app-featured-articles
+        [articles]="[
+          {
+            image:
+              'https://t4.ftcdn.net/jpg/04/84/87/61/360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg',
+            title: 'Representing brands as the source for inspiration',
+            insideTags: [
+              {
+                label: ('06/26/2025' | date)!,
+                style: { theme: TagTheme.LIGHT, fill: true },
+              },
+              {
+                label: 'Fashion',
+                style: { theme: TagTheme.DARK, showDot: true },
+              },
+            ],
+            category: '',
+            redirectPath: '',
+          },
+          {
+            image:
+              'https://www.unesco.org/sites/default/files/styles/paragraph_medium_desktop/article/2023-10/610x452visuel%20cov.jpg?itok=g5UySY-Q',
+            title: 'How brands dictate the fashion vision',
+            insideTags: [
+              {
+                label: 'Fashion',
+                style: { theme: TagTheme.LIGHT, showDot: true, fill: true },
+              },
+            ],
+            category: 'Fashion',
+            redirectPath: '',
+          },
+          {
+            image:
+              'https://hips.hearstapps.com/hmg-prod/images/spring-summer-fashion-trends-2025-67894bc4b1803.png?crop=0.6697674418604651xw:1xh;center,top&resize=1200:*',
+            title: 'Spring summer fashion trends',
+            category: 'Fashion',
+            redirectPath: '',
+          },
+        ]" />
+    </main>
+  </section>
 </div>
