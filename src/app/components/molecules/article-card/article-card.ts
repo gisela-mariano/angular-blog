@@ -15,6 +15,7 @@ export class ArticleCard {
 
   image = input.required<string>();
   title = input.required<string>();
+  redirectPath = input.required<string>();
   insideTags = input<Tag[]>();
   category = input<string>();
 }

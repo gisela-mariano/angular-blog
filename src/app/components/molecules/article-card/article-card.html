@@ -1,4 +1,4 @@
-<div class="article-card">
+<a [href]="redirectPath()" class="article-card" [title]="title()">
   <div
     class="article-card__main-content"
     [style.background-image]="`url('${image()}')`">
@@ -33,4 +33,4 @@
 
     <h1>{{ title() }}</h1>
   </div>
-</div>
+</a>
