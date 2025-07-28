@@ -18,12 +18,13 @@ $price-border-radius: 10px;
   background-image: url('https://static-cse.canva.com/blob/1210563/10experttipsfordesigningwithablurredbackgroundfeaturedimage.jpg');
   background-size: cover;
   background-position: center;
+  position: relative;
 
   &__price-content {
     align-self: flex-start;
-    position: relative;
-    bottom: 32px;
-    right: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 
     &__container {
       display: flex;

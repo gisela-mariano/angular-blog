@@ -2,7 +2,7 @@
 @use 'themes/colors' as *;
 
 $title-border-radius: 10px;
-$section-margin-top: prem(48px);
+$section-margin: prem(48px);
 
 .home {
   height: 100%;
@@ -10,7 +10,7 @@ $section-margin-top: prem(48px);
 
   .main-content {
     height: 100vh;
-    margin-top: $section-margin-top;
+    margin-top: $section-margin;
     display: flex;
     gap: prem(32px);
     box-sizing: border-box;
@@ -93,7 +93,29 @@ $section-margin-top: prem(48px);
     }
   }
 
-  .articles-section {
-    margin-top: $section-margin-top;
+  .articles-section,
+  .join-section {
+    margin-top: $section-margin;
+  }
+
+  .join-section {
+    &__main-content {
+      &__container-images {
+        width: 100%;
+        height: prem(90px);
+        margin-bottom: prem(32px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: prem(8px);
+
+        &__image {
+          height: 100%;
+          width: prem(150px);
+          border-radius: prem(50px);
+          background-size: cover;
+        }
+      }
+    }
   }
 }

@@ -92,7 +92,7 @@
             title: 'How brands dictate the fashion vision',
             insideTags: [
               {
-                label: 'Fashion',
+                label: 'Summer',
                 style: { theme: TagTheme.LIGHT, showDot: true, fill: true },
               },
             ],
@@ -107,6 +107,24 @@
             redirectPath: '',
           },
         ]" />
+    </main>
+  </section>
+
+  <section class="join-section">
+    <header class="join-section__header">
+      <app-section-title title="Be part of our Broadcast" />
+    </header>
+
+    <main class="join-section__main-content">
+      <div class="join-section__main-content__container-images">
+        @for (imageUrl of footerImageUrls(); track $index) {
+          <div
+            class="join-section__main-content__container-images__image"
+            [style.background-image]="`url('${imageUrl}')`"></div>
+        }
+      </div>
+
+      <app-join-form />
     </main>
   </section>
 </div>
