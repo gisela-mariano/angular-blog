@@ -31,6 +31,10 @@ $secondary-color: white;
     &.tag--fill {
       background-color: $primary-color;
       color: $secondary-color;
+
+      .tag__dot {
+        background-color: $secondary-color;
+      }
     }
   }
 
@@ -39,12 +43,16 @@ $secondary-color: white;
     color: $secondary-color;
 
     .tag__dot {
-      background-color: $primary-color;
+      background-color: $secondary-color;
     }
 
     &.tag--fill {
       background-color: $secondary-color;
       color: $primary-color;
+
+      .tag__dot {
+        background-color: $primary-color;
+      }
     }
   }
 }
