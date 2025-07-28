@@ -1,0 +1,36 @@
+<div class="join-form">
+  <div class="join-form__price-content">
+    <div class="join-form__price-content__container">
+      <div class="join-form__price-content__container__price">
+        <span class="message">{{ price() }}</span>
+        <span>spot</span>
+      </div>
+
+      <span class="message">Radio</span>
+    </div>
+  </div>
+
+  <main class="join-form__main">
+    <h1>Join now</h1>
+
+    <form>
+      <input type="text" name="name" id="name" placeholder="Your name" />
+      <input type="text" name="email" id="email" placeholder="Your email" />
+
+      <app-button label="Submit" />
+    </form>
+  </main>
+
+  <footer class="join-form__footer">
+    <div class="join-form__footer__divider"></div>
+
+    <div class="join-form__footer__infos">
+      <span>We wish to make you a Good Experience!</span>
+
+      <div class="join-form__footer__infos__container-buttons">
+        <app-button label="Got Any Questions?" />
+        <app-button label="Contact Us" />
+      </div>
+    </div>
+  </footer>
+</div>
