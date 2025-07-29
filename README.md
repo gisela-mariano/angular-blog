@@ -10,9 +10,9 @@ O meu objetivo com esse projeto é apenas me familiarizar com a sintaxe de compo
 
 As imagens de inspiração estão dentro da pasta ideas, mas as que mais levei em consideração para clonar foram essas:
 
-![Imagem de referência 1](.ideas/2.png 'Imagem de referência 1')
-![Imagem de referência 2](.ideas/3.png 'Imagem de referência 2')
-![Imagem de referência 4](.ideas/4.png 'Imagem de referência 3')
+![Imagem de referência 1](ideas/2.png 'Imagem de referência 1')
+![Imagem de referência 2](ideas/3.png 'Imagem de referência 2')
+![Imagem de referência 4](ideas/4.png 'Imagem de referência 3')
 
 O resultado da tela que desenvolvi ficou assim:
 
